@@ -29,13 +29,13 @@ df
 ### Data definition
 Median weekly earnings of full-time wage and salary workers by detailed occupation and sex.
 
-Occupation: Job title as given from BLS. Industry summaries are given in ALL CAPS.</br>
-All_workers: Number of workers male and female, in thousands.</br>
-All_weekly: Median weekly income including male and female workers, in USD.</br>
-M_workers: Number of male workers, in thousands.</br>
-M_weekly: Median weekly income for male workers, in USD.</br>
-F_workers: Number of female workers, in thousands.</br>
-F_weekly: Median weekly income for female workers, in USD.
+* Occupation: Job title as given from BLS. Industry summaries are given in ALL CAPS.</br>
+* All_workers: Number of workers male and female, in thousands.</br>
+* All_weekly: Median weekly income including male and female workers, in USD.</br>
+* M_workers: Number of male workers, in thousands.</br>
+* M_weekly: Median weekly income for male workers, in USD.</br>
+* F_workers: Number of female workers, in thousands.</br>
+* F_weekly: Median weekly income for female workers, in USD.
 
 ### Collapsing columns into key-value pair. Collapsing based on gender division as gender, workers and their weekly median income as class.
 ```{r}
@@ -85,7 +85,7 @@ There is air quality data and meteorological monitoring data for research and an
 
 ### Importing data
 ```{r}
-df <- read.csv("https://raw.githubusercontent.com/GabrielSantos33/DATA607_Project_02/main/2015y_Banqiao_Station.csv", stringsAsFactors = FALSE)
+df <- read.csv("https://raw.githubusercontent.com/GabrielSantos33/DATA607_Project_02/main/2015_Banqiao_Station.csv", stringsAsFactors = FALSE)
 str(df)
 ```
 
@@ -135,7 +135,7 @@ Data source can be found from [here.](https://www.gapminder.org/data/)
 ```{r}
 library(RCurl)
 library(tibble)
-url <- getURL("https://raw.githubusercontent.com/GabrielSantos33/DATA607_Project_02/main/indicator%20hiv%20estimated%20prevalence_%2015-49.csv")
+url <- getURL("https://raw.githubusercontent.com/GabrielSantos33/DATA607_Project_02/main/ind_hiv_est_prevalence_15_49.csv")
 df <- read.csv(text = url, header = TRUE, check.names = FALSE)
 ```
 
